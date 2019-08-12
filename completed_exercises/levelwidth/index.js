@@ -19,15 +19,15 @@ function levelWidth(root) {
     const node = arr.shift();
 
     if (node === 's') {
-      counters.push(0);
+      counters.push(0);                   // Create a new counter
       arr.push('s');
     } else {
       arr.push(...node.children);
-      counters[counters.length - 1]++;
+      counters[counters.length - 1]++;    // **** Incrementing the last value in the counters array
     }
   }
 
-  return counters;
+  return counters;                        // Will return an array whose values will be the number of nodes at each level of the tree
 }
 
 module.exports = levelWidth;
