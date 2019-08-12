@@ -38,7 +38,7 @@ class Tree {
       const node = arr.shift();
 
       arr.push(...node.children);
-      fn(node);
+      fn(node);                     //*****  The callers function gets the nodes one at a time in the breadth first order 
     }
   }
 
