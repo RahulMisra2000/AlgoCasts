@@ -32,7 +32,7 @@ class Tree {
     this.root = null;
   }
 
-  traverseBF(fn) {
+  traverseBF(fn) {                  // *** In BREADTH FIRST, the children are added at the END of the array
     const arr = [this.root];
     while (arr.length) {
       const node = arr.shift();
@@ -42,7 +42,7 @@ class Tree {
     }
   }
 
-  traverseDF(fn) {
+  traverseDF(fn) {                // *** In DEPTH FIRST, the children are added at the BEGINING  of the array
     const arr = [this.root];
     while (arr.length) {
       const node = arr.shift();
